@@ -6,15 +6,25 @@ import {
 const Item = ({ description, href, imageSrc, name }) => (
   <Box>
     <Button fill plain href={href}>
-      <Box fill align="center" justify="between">
-        <Box align="center">
-          <Heading level={2} margin="none">{name}</Heading>
-          <Paragraph size="large" textAlign="center">
-            {description}
-          </Paragraph>
+      {({ hover }) => (
+        <Box
+          fill
+          align="center"
+          justify="between"
+          pad={{ top: "medium", horizontal: 'medium' }}
+          round="large"
+          border={{ side: 'all', color: hover ? 'brand' : 'transparent', size: 'large' }}
+          overflow="hidden"
+        >
+          <Box align="center">
+            <Heading level={2} margin="none">{name}</Heading>
+            <Paragraph size="large" textAlign="center">
+              {description}
+            </Paragraph>
+          </Box>
+          <Image src={imageSrc} style={{ maxWidth: '100%' }} />
         </Box>
-        <Image src={imageSrc} style={{ maxWidth: '100%' }} />
-      </Box>
+      )}
     </Button>
   </Box>
 )
@@ -32,7 +42,7 @@ function App() {
             <Box direction="row" align="center" justify="center">
               <Heading>Grommet Catalog</Heading>
             </Box>
-            <Grid columns="medium" gap="large">
+            <Grid columns="large">
               <Item
                 name="Designer"
                 description="build experiences with grommet components; then publish
