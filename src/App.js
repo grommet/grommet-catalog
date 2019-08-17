@@ -24,7 +24,7 @@ function App() {
     <Grommet full theme={grommet}>
       <Box fill background="#3D138D" overflow="auto">
         <Grid
-          columns={['flex', ['medium', 'xlarge'], 'flex']}
+          columns={[['xxsmall', 'flex'], ['medium', 'xxlarge'], ['xxsmall', 'flex']]}
           rows={['flex']}
           areas={[{ name: 'content', start: [1, 0], end: [1, 0] }]}
         >
@@ -60,6 +60,28 @@ function App() {
                 builder that leverages the beautiful unsplash image service."
                 imageSrc="/screens/slides.png"
                 href="https://slides.grommet.io"
+              />
+              <Item
+                name="Grommet"
+                description="reference grommet component details and experiment
+                with them."
+                imageSrc="/screens/docs.png"
+                href="https://v2.grommet.io"
+              />
+              <Item
+                name="Icons"
+                description="explore the grommet icon library to find the
+                perfect way to communicate a concept succinctly."
+                imageSrc="/screens/icons.png"
+                href="https://icons.grommet.io"
+              />
+              <Item
+                name="Storybook"
+                description="wondering how you can do something with grommet?
+                check out the storybook with examples of different ways to
+                use the components."
+                imageSrc="/screens/storybook.png"
+                href="https://storybook.grommet.io/?path=/story/components--all"
               />
             </Grid>
           </Box>
