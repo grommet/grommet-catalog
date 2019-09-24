@@ -4,7 +4,7 @@ import {
 } from 'grommet';
 
 const Item = ({ description, href, imageSrc, name }) => (
-  <Box>
+  <Box pad="medium">
     <Button fill plain href={href}>
       {({ hover }) => (
         <Box
