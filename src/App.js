@@ -13,7 +13,11 @@ const Item = ({ description, href, imageSrc, name }) => (
           justify="between"
           pad={{ top: "medium", horizontal: 'medium' }}
           round="large"
-          border={{ side: 'all', color: hover ? 'brand' : 'transparent', size: 'large' }}
+          border={{
+            side: 'all',
+            color: hover ? 'brand' : 'transparent',
+            size: 'large'
+          }}
           overflow="hidden"
         >
           <Box align="center">
@@ -34,7 +38,11 @@ function App() {
     <Grommet full theme={grommet}>
       <Box fill background="#3D138D" overflow="auto">
         <Grid
-          columns={[['xxsmall', 'flex'], ['medium', 'xxlarge'], ['xxsmall', 'flex']]}
+          columns={[
+            ['xxsmall', 'flex'],
+            ['medium', 'xxlarge'],
+            ['xxsmall', 'flex']
+          ]}
           rows={['flex']}
           areas={[{ name: 'content', start: [1, 0], end: [1, 0] }]}
         >
@@ -45,8 +53,8 @@ function App() {
             <Grid columns="large">
               <Item
                 name="Designer"
-                description="build experiences with grommet components; then publish
-                and share your ideas with a simple wysiwyg interface."
+                description="build experiences with grommet components; then
+                publish and share your ideas with a simple wysiwyg interface."
                 imageSrc="/screens/designer.png"
                 href="https://designer.grommet.io"
               />
